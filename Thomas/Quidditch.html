@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Quidditch Match</title>
+  </head>
+
+  <body>
+
+    <p> Who's ready for some Quidditch?!?!?</p>
+
+    <script>
+
+            function Quidditch(matchDate, location, weather, potterInPlay) {
+                //houses
+                this.ravenclaw = 0;
+                this.gryffindor = 0;
+                this.hufflepuff = 0;
+                this.slytherin = 0;
+                this.players = 7;
+                //game qualites
+                this.bludger = 2;
+                //how much goals are worth
+                this.quaffle = 10;
+                this.snitch = 120;
+                //variables
+                this.matchDate = matchDate;
+                this.location = location;
+                this.weather = weather;
+                this.potterInPlay = potterInPlay;
+
+                //scores
+                //house - string (name of the house that scored)
+                this.snitchScore = function(house) {
+                  if (this.hasOwnProperty(house)) {
+                    this[house] += this.snitch;
+                  } else {
+                    alert("That's not a house!")
+                  }
+                }
+
+                this.quaffleScore = function(house) {
+                  if (this.hasOwnProperty(house)) {
+                    this[house] += this.quaffle;
+                  } else {
+                    alert("That's not a house!")
+                  }
+                }
+            };
+
+                var quidditchMatch = new Quidditch("March 5th, 2017", "Hogwarts", "Sunny", "Yes");
+
+    </script>
+  </body>
+
+</html>

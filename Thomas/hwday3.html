@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>JS Functions Demonstrations</title>
+  </head>
+
+  <body>
+
+    <p> This is some text</p>
+
+    <script>
+
+            function Cat(color, coat, size, age) {
+                this.color = color;
+                this.coat = coat;
+                this.size = size;
+                this.age = age;
+                this.kittens = 0;
+                this.currentWeight = 2;
+                this.catfood = 1;
+                this.birth = function(litter) {
+                  this.kittens += litter;
+                }
+                this.gainWeight1 = function() {
+                  return this.currentWeight + this.catfood + " Kilos"
+                }
+                this.gainWeight2 = function(fatCat) {
+                  this.currentWeight += fatCat;
+                }
+            };
+
+            var petAdoption = new Cat("Tan", "Hairless", "Small", 6);
+
+    </script>
+  </body>
+
+</html>
