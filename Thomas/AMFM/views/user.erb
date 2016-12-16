@@ -1,0 +1,16 @@
+<a href="/users">Back to Users</a>
+
+<h1><%= @user.username %></h1>
+<p><%= @user.first_name %></p>
+<p><%= @user.last_name %></p>
+<p><%= @user.email %></p>
+<p><%= @user.bio %></p>
+<p><%= @user.phone %></p>
+<p><%= @user.age %></p>
+<p><img src="<%= @user['profile_image'] %>"></p>
+
+<a href="/user/edit/<%= @user.id %>">Edit User</a>
+<form method="post" action="/delete/<%= @user.id %>">
+</br>
+  <button type="submit">Delete User</button>
+</form>

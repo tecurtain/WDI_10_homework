@@ -1,0 +1,12 @@
+<h2>Moving Pictures</h2>
+
+<% @videos.each do |video| %>
+<p>
+  <a href="/videos/<%= video['id'] %>"><%= video['name'] %></a>
+</br>
+</br>
+  <a href="/videos/<%= video['id'] %>/edit">edit</a>
+</p>
+  <% uid = video['video'].split("=")[1]%>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= uid %>" frameborder="0" allowfullscreen></iframe>
+<% end %>

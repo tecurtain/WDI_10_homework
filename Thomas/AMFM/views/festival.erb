@@ -1,0 +1,13 @@
+<a href="/festivals">Back to Festivals</a>
+
+<h1><%= @festival.name %></h1>
+<p>Location: <%= @festival.location %></p>
+<p>Start Date: <%= @festival.date %></p>
+<p>Ticket Price: $<%= @festival.cost %></p>
+<p><img src="<%= @festival['image_url'] %>" style="width:640px;height:360px;"></p>
+
+<a href="/festival/edit/<%= @festival.id %>">Edit Festival</a>
+<form method="post" action="/festival/delete/<%= @festival.id %>">
+</br>
+  <button type="submit">Delete Festival</button>
+</form>

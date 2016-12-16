@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="styles.css"/>
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Movie Info</h1>
+  <form action='/' method='get'>
+    <input name='movie' type='text' placeholder="Locate Movie Info" />
+    <button type="button" name="button">Get Movie</button>
+  </form>
+
+  <p>Title: <%= @title %></p>
+  <p>Year: <%= @year %></p>
+  <p>Rated: <%= @rated %></p>
+  <p>Released: <%= @released %></p>
+  <p>Runtime: <%= @runtime %></p>
+  <p>Genre: <%= @genre %></p>
+  <p>Director: <%= @director %></p>
+  <p>Writer: <%= @writer %></p>
+  <p>Actors: <%= @actors %></p>
+  <p>Plot: <%= @plot %></p>
+  <p>Rotten Tomatoes Review: <%= @review %></p>
+
+</body>
+</html>

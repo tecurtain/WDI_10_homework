@@ -1,0 +1,11 @@
+<form action="/user/edit/<%= @user['id'] %>" method="post">
+  <input name="username" value="<%= @user['username'] %>"/>
+  <input name="first_name" value="<%= @user['first_name'] %>"/>
+  <input name="last_name" value="<%= @user['last_name'] %>"/>
+  <input name="email" value="<%= @user['email'] %>"/>
+  <textarea name="bio"><%= @user['bio'] %></textarea>
+  <input name="phone" value="<%= @user['phone'] %>"/>
+  <input name="age" value="<%= @user['age'] %>"/>
+  <input name="profile_image" value="<%= @user['profile_image'] %>"/>
+  <button type="submit">Press Me</button>
+</form>

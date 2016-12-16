@@ -1,0 +1,12 @@
+<form action='/' method='get'>
+  <input name='movie' type='text' placeholder='search movies' />
+  <button>Search Movie</button>
+</form>
+<% unless @movie_name.nil? || @movie_name.empty? %>
+  <% @result.each do |key, value| %>
+    <li>
+      <span class='key'><%= key %></span>
+      <span class='value'><%= value %></span>
+    </li>
+  <% end %>
+<% end %>

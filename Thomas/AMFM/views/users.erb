@@ -1,0 +1,17 @@
+<form action="/users" method="post">
+  <input name="username" placeholder='Username'/>
+  <input name="first_name" placeholder='First Name'/>
+  <input name="last_name" placeholder='Last Name'/>
+  <input name="email" placeholder='Email'/>
+  <input name="phone" placeholder='Phone Number'/>
+  <textarea name="bio" placeholder='Bio'></textarea>
+  <input name="age" placeholder='Age'/>
+  <input name="profile_image" placeholder='Profile Image'/>
+  <button type="submit">Press Me</button>
+</form>
+
+<ul>
+  <% @users.each do |user| %>
+    <li><a href="/user/<%= user.id %>"><%= user.print_values %></li>
+  <% end %>
+</ul>

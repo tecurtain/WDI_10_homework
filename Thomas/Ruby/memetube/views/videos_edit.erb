@@ -1,0 +1,9 @@
+<h2>Edit Video</h2>
+<form action="/videos/<%= @video['id'] %>" method="post">
+  <label>Video Title</label>
+  <input name="title" type="text" value="<%= @video['name'] %>"/>
+
+  <label>Video Link</label>
+  <textarea name="embed_code"><%= @video['video'] %></textarea>
+  <button>save</button>
+</form>

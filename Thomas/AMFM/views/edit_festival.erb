@@ -1,0 +1,8 @@
+<form action="/festival/edit/<%= @festival['id'] %>" method="post">
+  <input name="name" value="<%= @festival['name'] %>"/>
+  <input name="location" value="<%= @festival['location'] %>"/>
+  <input name="date" value="<%= @festival['date'] %>"/>
+  <input name="cost" value="<%= @festival['cost'] %>"/>
+  <input name="image_url" value="<%= @festival['image_url'] %>"/>
+  <button type="submit">Press Me</button>
+</form>

@@ -1,0 +1,14 @@
+<form action="/festivals" method="post">
+  <input name="name" placeholder='name' />
+  <input name="location" placeholder= 'location' />
+  <input name="date" type='date' />
+  <input name="cost" placeholder="cost"/>
+  <input name="image_url" placeholder="image_url"/>
+  <button type="submit">Press Me</button>
+</form>
+
+<ul>
+  <% @festivals.each do |festival| %>
+    <li><a href="/festival/<%= festival.id %>"><%= festival.print_values %></li>
+  <% end %>
+</ul>

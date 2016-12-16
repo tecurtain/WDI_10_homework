@@ -1,0 +1,8 @@
+<% uid = @video['video'].split("=")[1]%>
+<p><%= @video['name'] %></p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= uid %>" frameborder="0" allowfullscreen></iframe>
+
+<form action="/videos/<%= @video['id'] %>/delete" method="post">
+  <button>delete</button>
+</form>
