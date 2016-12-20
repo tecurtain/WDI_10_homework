@@ -1,0 +1,6 @@
+<h3>Festival's I've been to.</h3>
+<% @user.festivals.each do |festival| %>
+  <ul>
+    <li><a href="/festival/<%= festival.id %>"><%= festival.print_values %></li>
+  </ul>
+<% end %>

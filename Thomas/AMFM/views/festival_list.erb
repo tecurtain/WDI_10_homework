@@ -1,0 +1,8 @@
+<div>
+  <ol>
+    <h3>Festivals</h3>
+    <% @festivals.each do |festival| %>
+      <li><a href="/festival/<%= festival.id %>"><%= festival.print_values %></li>
+    <% end %>
+  </ol>
+</div>

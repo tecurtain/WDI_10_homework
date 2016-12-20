@@ -1,17 +1,19 @@
-<form action="/users" method="post">
-  <input name="username" placeholder='Username'/>
-  <input name="first_name" placeholder='First Name'/>
-  <input name="last_name" placeholder='Last Name'/>
-  <input name="email" placeholder='Email'/>
-  <input name="phone" placeholder='Phone Number'/>
-  <textarea name="bio" placeholder='Bio'></textarea>
-  <input name="age" placeholder='Age'/>
-  <input name="profile_image" placeholder='Profile Image'/>
-  <button type="submit">Press Me</button>
-</form>
-
-<ul>
-  <% @users.each do |user| %>
-    <li><a href="/user/<%= user.id %>"><%= user.print_values %></li>
-  <% end %>
-</ul>
+<ul><form action="/users" method="post">
+  <li><input name="username" placeholder='Username'/></li>
+    <br>
+  <li><input name="first_name" placeholder='First Name'/></li>
+    <br>
+  <li><input name="last_name" placeholder='Last Name'/></li>
+    <br>
+  <li><input name="email" placeholder='Email'/></li>
+    <br>
+  <li><input name="phone" placeholder='Phone Number'/></li>
+    <br>
+  <li><textarea name="bio" placeholder='Bio'></textarea></li>
+    <br>
+  <li><input name="age" placeholder='Age'/></li>
+    <br>
+  <li><input name="profile_image" placeholder='Profile Image'/></li>
+    <br>
+  <li><button type="submit">Press Me</button></li>
+</form></ul>

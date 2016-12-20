@@ -1,0 +1,6 @@
+<h3>Festival Attendees</h3>
+<% @festival.users.each do |festival| %>
+  <ol>
+    <li><a href="/user/<%= festival.id %>"><%= festival.print_values %></li>
+  </ol>
+<% end %>

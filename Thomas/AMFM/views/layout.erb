@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>AM/FM</title>
+</head>
+<body>
+
+  <div id="container"><!-- #container -->
+    <div class='header'>
+      <div class='logo-wrapper'>
+        <a href='/' style="text-decoration:none"><h1>AM/FM</h1></a>
+      </div>
+        <% if logged_in? %>
+          <div class='nav'>
+        <% else %>
+          <div class='nav loggedout'>
+        <% end %>
+        <div>
+          <a href='/'>Homepage</a>
+        </div>
+        <div>
+          <a href='/about'>About</a>
+        </div>
+        <% if logged_in? %>
+          <div>
+            <a href='/user_list'>Users</a>
+          </div>
+        <% end %>
+        <% if logged_in? %>
+          <div>
+            <a href='/festival_list'>Festivals</a>
+          </div>
+        <% end %>
+        <% if logged_in? %>
+          <div>
+            <a href='/festivals'>Add Festival</a>
+          </div>
+        <% end %>
+        <% if !logged_in? %>
+          <div>
+            <a href='/users'>Sign Up</a>
+          </div>
+        <% end %>
+        <% if !logged_in? %>
+          <div>
+            <a href='/session/new'>Login</a>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div id='main_content'>
+      <p><%= yield %></p>
+    </div>
+    <% if !logged_in? %>
+      <div class='banner_block_signup'>
+  			<div>
+          <div class='yellowbanner'>
+            <a href='/users' class="signup_button">Get Started!</a>
+  				</div>
+        </div>
+      </div>
+    <% end %>
+    <% if logged_in? %>
+      <div class='banner_block'>
+        <div>
+  				<div class='yellowbanner'>
+            <form action='/session' method='post'>
+              <input type='hidden' name='_method' value='delete' />
+              <button class="signup_button" >logout</button>
+            </form>
+            <br>
+  				</div>
+  			</div>
+      </div>
+    <% end %>
+		<div class='ending_block'>
+				<div class='ending_title'>
+					AM/FM
+				</div>
+				<div class='social'>
+					<a href='https://twitter.com/tsnowmonkey'><img src="/images/twitter.png" alt="Twitter"></img></a>
+					<a href='https://www.facebook.com/tom.curtain'><img src="/images/facebook.png" alt="Facebook"></img></a>
+				</div>
+				<footer class='copyright'>
+					Copyright 2016. AM/FM.
+				</footer>
+		</div>
+  </div><!-- #container -->
+</body>
+</html>

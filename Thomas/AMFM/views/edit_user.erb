@@ -7,5 +7,19 @@
   <input name="phone" value="<%= @user['phone'] %>"/>
   <input name="age" value="<%= @user['age'] %>"/>
   <input name="profile_image" value="<%= @user['profile_image'] %>"/>
-  <button type="submit">Press Me</button>
+<br>
+<br>
+  <fieldset>
+    <legend>Festivals I've Been To</legend>
+    <% @festivals.each do |festival| %>
+    <ul>
+    <li><input name="festivals[]"
+      <% if @user.festivals.include?(festival) %> checked="true" <% end %>
+      value="<%= festival['id'] %>" type="checkbox"> <a href="/festival/<%= festival.id %>"><%= festival.print_values %></li>
+    </ul>
+    <% end %>
+  </fieldset>
 </form>
+<br>
+<br>
+<button type="submit">Save Info</button>

@@ -1,0 +1,137 @@
+img.size_festival {
+  display: block;
+  max-width:640px;
+  max-height:360px;
+  width: auto;
+  height: auto;
+}
+
+img.size_profile {
+  display: block;
+  max-width:640px;
+  max-height:360px;
+  width: auto;
+  height: auto;
+}
+#container {
+  width: 100%;
+  height:100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #F3F4FF;
+}
+
+.header {
+  width: 100%;
+  background-color: #fffef3;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex-grow: .5;
+  justify-content: space-around;
+  min-width: 500px;
+  font-size: 24px;
+}
+
+.nav.loggedout {
+  min-width: 100px;
+  flex-grow: .5;
+}
+
+.nav a {
+  color: black;
+  text-decoration: none;
+}
+
+.logo-wrapper {
+  flex-grow: 2;
+}
+
+.logo-wrapper h1 {
+  color: black;
+  font-family: sans-serif;
+  font-weight: 900;
+  padding-left: 50px;
+  font-size: 35px;
+  text-decoration: none;
+}
+
+.homepage h2 {
+  color: black;
+  font-family: sans-serif;
+  font-weight: 900;
+}
+
+#main_content ul{
+  display: flex;
+}
+
+.banner_block_signup {
+  width: 100%;
+  background: #c6e3f9;
+}
+
+.banner_block {
+  width: 100%;
+  background: #63d0ff;
+}
+
+.yellowbanner {
+  padding: 40px 0px;
+  text-align: center;
+}
+
+.signup_button {
+  background: #3477ff;
+  font-weight: 900;
+  font-size: 12px;
+  border-radius: 2px;
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+  padding: 16px 60px;
+}
+
+.ending_block {
+  background: #2a6489;
+  color: white;
+  padding: 30px 0;
+  flex wrap: wrap;
+}
+
+.ending_title {
+  margin: 0 auto;
+  width: 120px;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.social {
+  text-align: center;
+  height: 30px;
+  align-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.social img {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.copyright {
+  color: white;
+  text-align: center;
+  margin-top: 70px;
+}

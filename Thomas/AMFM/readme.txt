@@ -1,3 +1,8 @@
+* **A ``readme.md`` file** with explanations of the technologies used, the approach taken, installation instructions, unsolved problems, etc.
+
+* **Wireframes of your app**, hosted somewhere & linked in your readme
+* A link in your ``readme.md`` to the publically-accessible **user stories you created**
+
 Personal Festival Management System (PFMS) - Working Title
 
 Users create database of festivals or events they have been to or would like to go to.
@@ -7,4 +12,4 @@ Contained within the festival they want to go to would be the: Name, Location, D
 
 Contained within the festival they've gone to would be the: Name, Location, Date, Ticket Cost, Images they have taken, memorable events.
 
-Both Before/After states would have access to add other users they have attended the event or are planning on attending the event with.   
+Both Before/After states would have access to add other users they have attended the event or are planning on attending the event with.

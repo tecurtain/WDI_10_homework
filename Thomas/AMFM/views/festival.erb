@@ -1,13 +1,19 @@
-<a href="/festivals">Back to Festivals</a>
+<div>
+  <a href="/festivals">Back to Festivals</a>
+    <div>
+      <h2><%= @festival.name %></h2>
+      <p>Location: <%= @festival.location %></p>
+      <p>Start Date: <%= @festival.date %></p>
+      <p>Ticket Price: $<%= @festival.cost %></p>
+      <p><img class= 'size_festival' src="<%= @festival['image_url'] %>"></p>
 
-<h1><%= @festival.name %></h1>
-<p>Location: <%= @festival.location %></p>
-<p>Start Date: <%= @festival.date %></p>
-<p>Ticket Price: $<%= @festival.cost %></p>
-<p><img src="<%= @festival['image_url'] %>" style="width:640px;height:360px;"></p>
-
-<a href="/festival/edit/<%= @festival.id %>">Edit Festival</a>
-<form method="post" action="/festival/delete/<%= @festival.id %>">
-</br>
-  <button type="submit">Delete Festival</button>
-</form>
+      <a href="/festival/edit/<%= @festival.id %>">Edit Festival</a>
+      <br>
+      <br>
+      <a href="/attended_festival/<%= @festival.id %>">Festival Attendees</a>
+      <form method="post" action="/festival/delete/<%= @festival.id %>">
+      </br>
+        <button type="submit">Delete Festival</button>
+      </form>
+    </div>
+</div>

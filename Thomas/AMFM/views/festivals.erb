@@ -1,14 +1,18 @@
-<form action="/festivals" method="post">
-  <input name="name" placeholder='name' />
-  <input name="location" placeholder= 'location' />
-  <input name="date" type='date' />
-  <input name="cost" placeholder="cost"/>
-  <input name="image_url" placeholder="image_url"/>
-  <button type="submit">Press Me</button>
-</form>
-
-<ul>
-  <% @festivals.each do |festival| %>
-    <li><a href="/festival/<%= festival.id %>"><%= festival.print_values %></li>
-  <% end %>
-</ul>
+<div>
+  <h2>Create New Festival</h2>
+    <div>
+      <ul><form action="/festivals" method="post">
+        <li><input name="name" placeholder='name' /></li>
+          <br>
+        <li><input name="location" placeholder= 'location' /></li>
+          <br>
+        <li><input name="date" type='date' /></li>
+          <br>
+        <li><input name="cost" placeholder="cost"/></li>
+          <br>
+        <li><input name="image_url" placeholder="image_url"/></li>
+          <br>
+        <li><button type="submit">Press Me</button></li>
+      </form></ul>
+    </div>
+</div>
