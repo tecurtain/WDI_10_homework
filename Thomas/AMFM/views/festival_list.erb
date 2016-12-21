@@ -1,8 +1,10 @@
-<div>
-  <ol>
-    <h3>Festivals</h3>
-    <% @festivals.each do |festival| %>
-      <li><a href="/festival/<%= festival.id %>"><%= festival.print_values %></li>
-    <% end %>
-  </ol>
+<h2 class='wrapper'>Festivals</h2>
+<div class="wrapper">
+  <% @festivals.each do |festival| %>
+  <a href="/festival/<%= festival.id %>"><%= festival.print_values %>
+    <figure class="image_grid">
+      <img class="size_profile_small image_grid" src="<%= festival.image_url %>" />
+    </figure>
+  </a>
+  <% end %>
 </div>

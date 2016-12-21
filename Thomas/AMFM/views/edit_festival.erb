@@ -1,13 +1,18 @@
-<div>
-  <h2>Edit Your Festival</h2>
-    <div>
-      <form action="/festival/edit/<%= @festival['id'] %>" method="post">
-        <input name="name" value="<%= @festival['name'] %>"/>
-        <input name="location" value="<%= @festival['location'] %>"/>
-        <input name="date" value="<%= @festival['date'] %>"/>
-        <input name="cost" value="<%= @festival['cost'] %>"/>
-        <input name="image_url" value="<%= @festival['image_url'] %>"/>
-        <button type="submit">Press Me</button>
-      </form>
-    </div>
+<div class='outer_form'>
+  <div class='form_div'>
+    <form action="/festival/edit/<%= @festival['id'] %>" method="post">
+      <h2 align= 'center'>Edit Festival</h2>
+      <label for="name">Festival Name</label>
+      <input class ='form_text' type="text" id='name' name="name" value="<%= @festival['name'] %>"/>
+      <label for="location">Location</label>
+      <input class ='form_text' type="text" id='location' name="location" value="<%= @festival['location'] %>"/>
+      <label for="date">Date</label>
+      <input class ='form_text' type="text" id='date' name="date" type='date' value="<%= @festival['date'] %>"/>
+      <label for="cost">Cost</label>
+      <input class ='form_text' type="text" id='cost' name="cost" value="<%= @festival['cost'] %>"/>
+      <label for="image_url">Image Url</label>
+      <input class ='form_text' type="text" id='image_url' name="image_url" value="<%= @festival['image_url'] %>"/>
+      <input class='form_submit' type="submit" value="Submit">
+    </form>
+  </div>
 </div>

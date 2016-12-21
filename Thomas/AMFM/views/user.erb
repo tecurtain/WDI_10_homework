@@ -1,17 +1,22 @@
-<a href="/users">Back to Users</a>
 
-<h2><%= @user.username %></h2>
-<p><%= @user.first_name %> <%= @user.last_name %></p>
-<p><%= @user.email %></p>
-<p><%= @user.bio %></p>
-<p><%= @user.phone %></p>
-<p><%= @user.age %></p>
-<a href="/festival_attendance/<%= @user.id %>">Festivals</a><span> I've been to.</span>
-<p><img class="size_profile" src="<%= @user['profile_image'] %>"></p>
+<div>
+    <div class="festival_text" align="center">
+      <a href="/user_list">Back to Users</a>
+          <p><%= @user.first_name %> <%= @user.last_name %></p>
+          <p>Email: <%= @user.email %></p>
+          <p>Bio: <%= @user.bio %></p>
+          <p>Phone Number: <%= @user.phone %></p>
+          <p>Age: <%= @user.age %></p>
+          <a href="/user/<%= @user.id %>/edit">Edit User</a>
+          <p><a href="/festival_attendance/<%= @user.id %>">Festival Attendance</a></p>
 
-<a href="/user/edit/<%= @user.id %>">Edit User</a>
-
-<form method="post" action="/user/delete/<%= @user.id %>">
-</br>
-  <button type="submit">Delete User</button>
-</form>
+            <form method="post" action="/user/<%= @user.id %>">
+            </br>
+              <input type='hidden' name='_method' value='delete'/>
+              <button>Delete User</button>
+              <br>
+              <br>
+            </form>
+    </div>
+    <p><img class="size_profile festival_image" src="<%= @user['profile_image'] %>"></p>
+</div>

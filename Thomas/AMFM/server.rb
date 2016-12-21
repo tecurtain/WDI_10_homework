@@ -62,7 +62,7 @@ get '/festival/:id' do
 end
 
 #Renders the edit form
-get "/festival/edit/:id" do
+get "/festival/:id/edit" do
   if logged_in?
     begin
       @festival = Festival.find(@params['id'])
@@ -76,7 +76,7 @@ get "/festival/edit/:id" do
 end
 
 # Processes the edit form
-post '/festival/edit/:id' do
+post '/festival/:id/edit' do
   if logged_in?
     begin
       @festival = Festival.find(@params['id'])
@@ -109,7 +109,7 @@ get '/festival_list' do
 end
 
 #destory festivals!
-post '/festival/delete/:id' do
+delete '/festival/:id' do
   if logged_in?
     begin
       @festival = Festival.find(@params['id'])
@@ -152,7 +152,7 @@ get '/user/:id' do
 end
 
 #Renders the edit form
-  get "/user/edit/:id" do
+  get "/user/:id/edit" do
     if logged_in?
       # begin
         @user = User.find(@params['id'])
@@ -167,7 +167,7 @@ end
   end
 
 # Processes the edit form
-post '/user/edit/:id' do
+post '/user/:id/edit' do
   if logged_in?
     begin
       @user = User.find(@params['id'])
@@ -204,7 +204,7 @@ get '/user_list' do
 end
 
 #destroy!
-post '/user/delete/:id' do
+delete '/user/:id' do
   if logged_in?
     begin
       @user = User.find(@params['id'])
@@ -227,13 +227,14 @@ end
 get '/attended_festival/:id' do
   if logged_in?
     @festival =  Festival.find(@params['id'])
+    @users =  User.all
     erb :attended_festival
   else
     redirect to '/session/new'
   end
 end
 
-#List of festivals user has gone to
+# List of festivals user has gone to
 get '/festival_attendance/:id' do
   if logged_in?
     @user = User.find(@params['id'])
@@ -256,7 +257,8 @@ post '/session' do
     session[:user_id] = user.id
     redirect to '/'
   else
-    erb :sessions_new
+    @error_message = 'Sorry, your email/password combo was incorrect.'
+    erb :session_new
   end
 end
 

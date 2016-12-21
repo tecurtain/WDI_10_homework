@@ -52,14 +52,14 @@
         <% end %>
       </div>
     </div>
-    <div id='main_content'>
+    <div class='main_content'>
       <p><%= yield %></p>
     </div>
     <% if !logged_in? %>
       <div class='banner_block_signup'>
   			<div>
           <div class='yellowbanner'>
-            <a href='/users' class="signup_button">Get Started!</a>
+            <a href='/users' style="text-decoration:none" class="signup_button">Get Started</a>
   				</div>
         </div>
       </div>
@@ -86,7 +86,7 @@
 					<a href='https://www.facebook.com/tom.curtain'><img src="/images/facebook.png" alt="Facebook"></img></a>
 				</div>
 				<footer class='copyright'>
-					Copyright 2016. AM/FM.
+					© 2016 AM/FM
 				</footer>
 		</div>
   </div><!-- #container -->

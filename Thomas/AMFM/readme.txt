@@ -13,3 +13,7 @@ Contained within the festival they want to go to would be the: Name, Location, D
 Contained within the festival they've gone to would be the: Name, Location, Date, Ticket Cost, Images they have taken, memorable events.
 
 Both Before/After states would have access to add other users they have attended the event or are planning on attending the event with.
+
+
+CODEPEN Gallery
+http://codepen.io/SitePoint/pen/bEvVqP

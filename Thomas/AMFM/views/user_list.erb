@@ -1,6 +1,10 @@
-<ol>
-  <h3>Username</h3>
+<h2 class='wrapper'>Users</h2>
+<div class="wrapper">
   <% @users.each do |user| %>
-    <li><a href="/user/<%= user.id %>"><%= user.print_values %></li>
+  <a href="/user/<%= user.id %>"><%= user.print_values %>
+    <figure class="image_grid">
+      <img class="size_profile_small image_grid" src="<%= user.profile_image %>" />
+    </figure>
+  </a>
   <% end %>
-</ol>
+</div>

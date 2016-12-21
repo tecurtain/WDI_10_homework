@@ -1,25 +1,37 @@
-<form action="/user/edit/<%= @user['id'] %>" method="post">
-  <input name="username" value="<%= @user['username'] %>"/>
-  <input name="first_name" value="<%= @user['first_name'] %>"/>
-  <input name="last_name" value="<%= @user['last_name'] %>"/>
-  <input name="email" value="<%= @user['email'] %>"/>
-  <textarea name="bio"><%= @user['bio'] %></textarea>
-  <input name="phone" value="<%= @user['phone'] %>"/>
-  <input name="age" value="<%= @user['age'] %>"/>
-  <input name="profile_image" value="<%= @user['profile_image'] %>"/>
-<br>
-<br>
-  <fieldset>
-    <legend>Festivals I've Been To</legend>
-    <% @festivals.each do |festival| %>
-    <ul>
-    <li><input name="festivals[]"
-      <% if @user.festivals.include?(festival) %> checked="true" <% end %>
-      value="<%= festival['id'] %>" type="checkbox"> <a href="/festival/<%= festival.id %>"><%= festival.print_values %></li>
-    </ul>
-    <% end %>
-  </fieldset>
-</form>
-<br>
-<br>
-<button type="submit">Save Info</button>
+<div class='outer_form'>
+  <div class='form_div'>
+    <form action="/user/<%= @user['id'] %>/edit" method="post">
+      <h2 align= 'center'>Edit User</h2>
+      <label for="username">Username</label>
+      <input class ='form_text' type="text" id='username' name="username" value="<%= @user['username'] %>"/>
+      <label for="first_name">First Name</label>
+      <input class ='form_text' type="text" id='first_name' name="first_name" value="<%= @user['first_name'] %>"/>
+      <label for="last_name">Last Name</label>
+      <input class ='form_text' type="text" id='date' name="last_name" type='last_name' value="<%= @user['last_name'] %>"/>
+      <label for="email">Email</label>
+      <input class ='form_text' type="text" id='email' name="email" value="<%= @user['email'] %>"/>
+      <label for="phone">Phone Number</label>
+      <input class ='form_text' type="text" id='phone' name="phone" value="<%= @user['phone'] %>"/>
+      <label for="bio">Bio</label>
+      <textarea class ='form_text' type="text" id='bio' name="bio"><%= @user['bio'] %></textarea>
+      <label for="age">Age</label>
+      <input class ='form_text' type="text" id='age' name="age" value="<%= @user['age'] %>"/>
+      <label for="profile_image">Profile Image</label>
+      <input class ='form_text' type="text" id='profile_image' name="profile_image" value="<%= @user['profile_image'] %>"/>
+      <br>
+      <br>
+      <fieldset class ='fieldset'>
+        <legend>Festivals I've Been To</legend>
+        <% @festivals.each do |festival| %>
+        <ul>
+        <li><input name="festivals[]"
+          <% if @user.festivals.include?(festival) %> checked="true" <% end %>
+          value="<%= festival['id'] %>" type="checkbox"> <a href="/festival/<%= festival.id %>"><%= festival.print_values %></li>
+        </ul>
+        <% end %>
+      </fieldset>
+      <br>
+      <input class='form_submit' type="submit" value="Submit">
+    </form>
+  </div>
+</div>
