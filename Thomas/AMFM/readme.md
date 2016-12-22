@@ -27,7 +27,7 @@ http://codepen.io/SitePoint/pen/bEvVqP
 
 The project was broken down into different components following a user story and brainstormed in my journal. A table was sketched out to create the foundation for the app.  Later, multiple tables were added and their relationships formed the basis for the the model interactions. The resulting flow looked like this:
 
-![Use Story Flow Diagram](https://github.com/tecurtain/)
+![Use Story Flow Diagram](https://github.com/tecurtain/WDI_10_homework/blob/master/Thomas/AMFM/readme_images/readme_flow.jpg?raw=true)
 
 Ruby documentation was used where methods were unclear or unfamiliar.  
 
@@ -35,7 +35,7 @@ Console.rb file, and Pry were used extensively during the coding process to test
 
 Relationships were mapped out using diagrams in my journal to determine how to structure my table.  
 
-![Table Relationship](https://github.com/tecurtain)
+![Table Relationship](https://github.com/tecurtain/WDI_10_homework/blob/master/Thomas/AMFM/readme_images/readme_relationships.jpg?raw=true)
 
 #### FUTURE EXPANSION
 ##### (stretch goals)
