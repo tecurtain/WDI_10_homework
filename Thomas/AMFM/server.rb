@@ -132,6 +132,7 @@ end
 post '/users' do
   @user = User.new(@params)
   if @user.save
+    session[:user_id] = @user.id
     erb :user
   else
     erb :user_errors
@@ -154,13 +155,13 @@ end
 #Renders the edit form
   get "/user/:id/edit" do
     if logged_in?
-      # begin
+      begin
         @user = User.find(@params['id'])
         @festivals = Festival.all
         erb :edit_user
-      # rescue
-        # "There was no user with the id #{@params['id']}"
-      # end
+      rescue
+        "There was no user with the id #{@params['id']}"
+      end
     else
       redirect to '/session/new'
     end
@@ -238,6 +239,7 @@ end
 get '/festival_attendance/:id' do
   if logged_in?
     @user = User.find(@params['id'])
+    @festivals = Festival.all
     erb :festival_attendance
   else
     redirect to '/session/new'

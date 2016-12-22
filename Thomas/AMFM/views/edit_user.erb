@@ -23,10 +23,10 @@
       <fieldset class ='fieldset'>
         <legend>Festivals I've Been To</legend>
         <% @festivals.each do |festival| %>
-        <ul>
+        <ul id='ul_checkbox'>
         <li><input name="festivals[]"
           <% if @user.festivals.include?(festival) %> checked="true" <% end %>
-          value="<%= festival['id'] %>" type="checkbox"> <a href="/festival/<%= festival.id %>"><%= festival.print_values %></li>
+          value="<%= festival['id'] %>" type="checkbox">&nbsp;&nbsp;<a id='a_checkbox' href="/festival/<%= festival.id %>"><%= festival.print_values %></li>
         </ul>
         <% end %>
       </fieldset>
