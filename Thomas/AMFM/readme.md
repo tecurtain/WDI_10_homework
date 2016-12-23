@@ -42,5 +42,5 @@ Relationships were mapped out using diagrams in my journal to determine how to s
 
 * Permissions will need to be assigned.  There must be a few states to resolve a number of issues.  Superuser access will need to be created to have access to both users and festivals.  Festivals will need to belong to the individuals who created them, and only be abled to be edited by the superuser or the creator.  Users should only be able to edit their own profile, not everyones as it currently stands.  
 * Video functionality should be added so users can upload videos as well as images.  
-*
+* If anymore menu items are added, drop down menus should be utilised.   
 *
