@@ -1,0 +1,11 @@
+<h1>Post</h1>
+
+<ul id="posts-list">
+  <% @posts.each do |post| %>
+    <li><span><%= post.userpost %></span></li>
+  <% end %>
+</ul>
+
+<button id='add-post'>Comment</button>
+
+<input id='userpost-input' name='post[userpost]' placeholder="Post" type='text' />

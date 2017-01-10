@@ -1,0 +1,26 @@
+<h1>Wall</h1>
+
+<textarea id='userpost-input' rows="4" cols="50">
+</textarea>
+
+<button id='add-post'>✓</button>
+
+<div id="posts-list">
+  <% @posts.each do |post| %>
+    <div>
+      <p><%= post.userpost %>
+      <button type="button" class="remove-post" data-post-id="<%= post.id %>">X</button>
+      </p>
+      <!-- Create a text input, for creating comments, with a button next to it class="submit-comment" -->
+      <input type="text" name="" value="">
+      <button type="button" class="submit-comment" data-post-id="<%= post.id %>">✓</button>
+      <ul>
+        <% post.comments.each do |comment| %>
+          <li><%= comment.usercomment %><button type="button" class="remove-comment" data-comment-id="<%= comment.id %>">X</button></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
+
+<%= javascript_include_tag "wall"  %>

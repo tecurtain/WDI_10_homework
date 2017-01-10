@@ -1,0 +1,11 @@
+<h1>Comment</h1>
+
+<ul id="comments-list">
+  <% @comments.each do |comment| %>
+    <li><span><%= comment.usercomment %></span></li>
+  <% end %>
+</ul>
+
+<button id='add-comment'>Comment</button>
+
+<input id='usercomment-input' name='comment[usercomment]' placeholder="Comment" type='text' />
