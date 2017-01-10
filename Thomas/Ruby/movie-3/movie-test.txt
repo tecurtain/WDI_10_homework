@@ -1,0 +1,48 @@
+var movieSearch = document.getElementById('movie-search');
+var getTitle = document.getElementById('get-title');
+var movieList = document.getElementById('movie-list');
+
+$(document).ready(function() {
+
+  var getTitle = function() {
+    var settings = {
+      url: 'http://omdbapi.com/',
+      data: { s: $('#movie-search').val() },
+      method: 'get',
+    }
+
+    $.ajax(settings).done(function(response){
+
+
+      response.Search.forEach(function(movie) {
+          console.log(movie.Title);
+        });
+      var $liElement = $("<li>");
+      var $strongElement = $("<strong>");
+      $strongElement.append(response.title);
+      $liElement.append($strongElement);
+      $('#movie-search').append($liElement);
+    });
+  }
+  // title input event listener
+  $('#get-title').on('click', getTitle);
+});
+
+var createLi = function() {
+  if (movieSearch.value !== '') {
+    var liElement = document.createElement('li');
+    liElement.textContent = movieSearch.value;
+    movieList.appendChild(liElement);
+    movieSearch.value = "";
+  }
+};
+
+getTitle.addEventListener("click", createLi);
+//
+// for (i = 0; i < cars.length; i++) {
+//     text += cars[i] + "<br>";
+// }
+
+// for (var i = 0; i < response.Search.length; i++) {
+//   console.log(response.Search[i].Title)
+// }
