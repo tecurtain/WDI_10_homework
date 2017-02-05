@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<h1>Planets</h1>
+
+<% flash.each do |key, value| %>
+  <%= content_tag :div, value, class: "flash-#{key}" %>
+<% end %>
+
+<ul id="planets-list">
+  <% @planets.each do |planet| %>
+    <li><strong><%= planet.name %></strong>: <span><%= planet.surface %></span> <span><%= planet.color %></span></li>
+    <form method="post" action="/planets/<%= planet.id %>">
+      <%= hidden_field_tag '_method', 'delete' %>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <input type="submit" value="Delete Planet">
+    </form>
+    <ul>
+      <li><%= link_to 'Edit Planet', edit_planet_path(planet) %></li>
+      <li><%= link_to 'Show Planet', planet_path(planet) %></li>
+    </ul>
+  <% end %>
+</ul>
+
+<FORM METHOD="LINK" ACTION="/planets/new">
+<INPUT TYPE="submit" VALUE="Create Planet">
+</FORM>
+
+</body>
+</html>

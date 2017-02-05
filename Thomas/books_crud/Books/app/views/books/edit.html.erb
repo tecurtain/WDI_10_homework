@@ -1,0 +1,23 @@
+<div class='edit_form_sub'>
+  <form align= 'center' action="/books/<%= @book.id %>" method="post">
+    <h2 align= 'center'>Edit Book</h2>
+      <%= hidden_field_tag '_method', 'put' %>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <div><label for="name">Title:</label>
+      <input class ='form_text' type="text" id='name' name="name" value="<%= @book.name %>" />
+      </div>
+      <div><label for="author">Author:</label>
+      <input class ='form_text' type="text" id='author' name="author" value="<%= @book.author %>" />
+      </div>
+      <div><label for="genre">Genre:</label>
+      <input class ='form_text' type="text" id='genre' name="genre" value="<%= @book.genre %>" />
+      </div>
+      <div><label for="pages">Number of Pages:</label>
+      <input class ='form_text' type="text" id='pages' name="pages" value="<%= @book.pages %>" />
+      </div>
+      <div><label for="year">Year Published:</label>
+      <input class ='form_text' type="text" id='year' name="year" value="<%= @book.year %>" />
+      </div>
+      <button type="submit" name="button">Submit</button>
+  </form>
+</div>

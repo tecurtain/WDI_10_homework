@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Books</h1>
+  <form method="link" action="/books/new">
+  <input type="submit" value="Add Book">
+  </form>
+  <br>
+  <% flash.each do |key, value| %>
+    <%= content_tag :div, value, class: "flash-#{key}" %>
+  <% end %>
+  <br>
+    <div class="display-book">
+      <ul class="outer-books-list">
+        <% @books.each do |book| %>
+        <div class="inner-books-list">
+          <h3><strong><%= book.name %></strong></h3>
+              <ul>
+                <li><span><strong>Author: </strong><%= book.author %></span></li>
+                <li><span><strong>Genre: </strong><%= book.genre %></span></li>
+                <li><span><strong>Pages: </strong><%= book.pages %></span></li>
+                <li><span><strong>Year: </strong><%= book.year %></span></li>
+              </ul>
+          <br>
+          <form method="post" action="/books/<%= book.id %>">
+            <%= hidden_field_tag '_method', 'delete' %>
+            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+            <span><input type="submit" value="Remove"></span>
+          </form>
+          <span><%= link_to 'Edit', edit_book_path(book) %></span>
+          <span><%= link_to 'Display', book_path(book) %></span>
+          <br>
+        </div>
+        <% end %>
+      </ul>
+    </div>
+  <% if @books.blank? %>
+    <h4>There are no books containing the term <%= params[:search] %>.</h4>
+  <% end %>
+</body>
+</html>

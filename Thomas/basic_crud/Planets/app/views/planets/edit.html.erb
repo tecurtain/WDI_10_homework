@@ -1,0 +1,17 @@
+<div class='edit_form_sub'>
+  <form align= 'center' action="/planets/<%= @planet.id %>" method="post">
+    <h2 align= 'center'>Edit Planet</h2>
+      <%= hidden_field_tag '_method', 'put' %>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <div><label for="name">Planet Name:</label>
+      <input class ='form_text' type="text" id='name' name="name" value="<%= @planet.name %>" />
+      </div>
+      <div><label for="surface">Planet Surface:</label>
+      <input class ='form_text' type="text" id='surface' name="surface" value="<%= @planet.surface %>" />
+      </div>
+      <div><label for="color">Planet Color:</label>
+      <input class ='form_text' type="text" id='color' name="color" value="<%= @planet.color %>" />
+      </div>
+      <button type="submit" name="button">Submit</button>
+  </form>
+</div>
