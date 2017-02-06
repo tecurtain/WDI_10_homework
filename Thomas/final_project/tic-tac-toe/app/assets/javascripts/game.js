@@ -18,11 +18,13 @@ var Game = function(element, playerType){
     this.Board = null;
     this.activePlayer = 0; // current active player (index of this.players)
     this.currentPlayer = (playerType == 'cross') ? 0 : 1;
+    console.log('init Game');
 
     this.bindEvents()
   }
 
   this.bindEvents = function(){
+    console.log('bind events');
     var self = this;
 
     $('#new-match', this.element).click(function(e){
@@ -69,7 +71,6 @@ var Game = function(element, playerType){
 
   this.start = function(){
     this.init();
-    // console.log('Starting Game');
     $('#game tr td').attr('class', '');
     this.getTurn();
     // create two players
@@ -79,6 +80,7 @@ var Game = function(element, playerType){
     this.Board.update();
     // set this.startTime
     this.startTime = Date.now();
+    debugger;
   };
 
   this.newGame = function(element) {
