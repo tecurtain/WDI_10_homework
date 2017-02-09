@@ -80,7 +80,6 @@ var Game = function(element, playerType){
     this.Board.update();
     // set this.startTime
     this.startTime = Date.now();
-    debugger;
   };
 
   this.newGame = function(element) {

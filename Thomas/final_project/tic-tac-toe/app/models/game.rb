@@ -10,6 +10,7 @@ class Game < ApplicationRecord
     # Store the details of each opponent
     REDIS.set("opponent_for:#{cross}", nought)
     REDIS.set("opponent_for:#{nought}", cross)
+
   end
 
   def self.withdraw(uuid)
