@@ -1,14 +1,22 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Unit #4 Project: Your Portfolio Project
 
+### ![]() WDI-10 200-OK!
+
 ### Project Focus
-The majority of time spent on this project was in researching and learning about Action Cable in Rails 5 and implenting a chatbox over Action Cable.  Understanding the underlying technology used by Action Cable was difficult but necessary to be able to modify for use as a chat app.  
+The majority of time spent on this project was in researching and learning about Action Cable in Rails 5 as well I was then able to take the existing Tic-Tac-Toe application and append a chatbox utilising Action Cable below the original game.  Understanding the underlying technology used by Action Cable was difficult but necessary to be able to modify for use as a chat app.  
 
 Using the below source code as a template, the CSS was customised and chat capability was added below the game so users are automatically logged in and can communicate as the game progresses. Features were added such as bubble texts, read receipts and a "user is typing" message.  
+
+### ![]() Player 1
+
+### ![]() Player 2
 
 ---
 ## Example Workflow
 
 Working with the class instructor a todo list would be established and implemented.  Problems would be diagramed and questions asked and answered.  The environment was conducive to learning and productivity.  
+
+### ![]() White Board Diagram
 
 In game.coffee
 
