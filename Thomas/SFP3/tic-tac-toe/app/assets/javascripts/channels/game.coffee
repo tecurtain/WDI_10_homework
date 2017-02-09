@@ -26,9 +26,18 @@ App.game = App.cable.subscriptions.create "GameChannel",
 
       when "receive_message"
         liElement = document.createElement('p');
+        spanElement = document.createElement('span');
+        if (data.self)
+          liElement.classList.add('self');
+        else
+          liElement.classList.add('other');
         $('#usermsg').html(data.message)
-        liElement.textContent = data.msg.data;
+        spanElement.textContent = data.msg.data;
+        liElement.appendChild(spanElement)
         $('#chatbox').append(liElement)
+
+        $textarea = $('#chatbox');
+        $textarea.scrollTop($textarea[0].scrollHeight);
 
   send_message: (message) ->
     @perform 'send_message', data: message

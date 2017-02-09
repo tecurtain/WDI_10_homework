@@ -40,6 +40,7 @@ var Game = function(element, playerType){
       e.preventDefault();
       var message = $('#usermsg').val()
       App.game.send_message(message);
+      $('#usermsg').val('')
     });
 
     // bind input actions

@@ -21,7 +21,7 @@ class GameChannel < ApplicationCable::Channel
 
   def send_message(data)
     opponent = Game.opponent_for(uuid)
-    ActionCable.server.broadcast "player_#{opponent}", {action: "receive_message", msg: data}
-    ActionCable.server.broadcast "player_#{uuid}", {action: "receive_message", msg: data}
+    ActionCable.server.broadcast "player_#{opponent}", {action: "receive_message", msg: data, self: false}
+    ActionCable.server.broadcast "player_#{uuid}", {action: "receive_message", msg: data, self: true}
   end
 end
