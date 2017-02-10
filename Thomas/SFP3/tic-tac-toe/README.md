@@ -1,6 +1,7 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Unit #4 Project: Your Portfolio Project
 
-### ![](https://github.com/tecurtain/WDI_10_homework/blob/master/Thomas/SFP3/tic-tac-toe/app/assets/images/200-Ok.JPG?raw=true) WDI-10 200-OK!
+### ![](https://github.com/tecurtain/WDI_10_homework/blob/master/Thomas/SFP3/tic-tac-toe/app/assets/images/200-Ok.JPG?raw=true)
+### WDI-10 200-OK!
 
 ### Project Focus
 The majority of time spent on this project was in researching and learning about Action Cable in Rails 5 as well I was then able to take the existing Tic-Tac-Toe application and append a chatbox utilising Action Cable below the original game.  Understanding the underlying technology used by Action Cable was difficult but necessary to be able to modify for use as a chat app.  
@@ -16,7 +17,9 @@ Using the below source code as a template, the CSS was customised and chat capab
 
 Working with the class instructor a todo list would be established and implemented.  Problems would be diagramed and questions asked and answered.  The environment was conducive to learning and productivity.  
 
-### ![](https://github.com/tecurtain/WDI_10_homework/blob/master/Thomas/SFP3/tic-tac-toe/app/assets/images/WorkFlow.jpg?raw=true) White Board Diagram
+### ![](https://github.com/tecurtain/WDI_10_homework/blob/master/Thomas/SFP3/tic-tac-toe/app/assets/images/WorkFlow.jpg?raw=true)
+
+### White Board Diagram
 
 In game.coffee
 
