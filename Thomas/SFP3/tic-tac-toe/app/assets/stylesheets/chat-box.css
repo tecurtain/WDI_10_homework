@@ -31,7 +31,7 @@ a {
 #chatbox {
     text-align:left;
     margin:0 auto;
-    margin-bottom:25px;
+    margin-bottom:10px;
     padding:10px;
     background:#fff;
     height:120px;
@@ -73,6 +73,14 @@ a {
   padding: 3px;
   padding-left: 7px;
   padding-right: 7px;
+}
+
+#user_type_status {
+  text-align: left;
+  color: white;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  min-height: 14px;
 }
 
 #submitmsg {

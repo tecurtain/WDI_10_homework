@@ -19,9 +19,22 @@ class GameChannel < ApplicationCable::Channel
     Game.new_game(uuid)
   end
 
+  def user_typing
+    opponent = Game.opponent_for(uuid)
+    ActionCable.server.broadcast "player_#{opponent}", {action: "user_typing"}
+  end
+
+  def user_stopped_typing
+    opponent = Game.opponent_for(uuid)
+    ActionCable.server.broadcast "player_#{opponent}", {action: "user_stopped_typing"}
+  end
+
   def send_message(data)
     opponent = Game.opponent_for(uuid)
     ActionCable.server.broadcast "player_#{opponent}", {action: "receive_message", msg: data, self: false}
     ActionCable.server.broadcast "player_#{uuid}", {action: "receive_message", msg: data, self: true}
   end
 end
+
+
+# 4. In `GameChannel` implement two corresponding methods that broadcast a message to `opponent`

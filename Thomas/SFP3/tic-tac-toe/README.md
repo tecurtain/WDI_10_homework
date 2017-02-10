@@ -8,9 +8,11 @@ The majority of time spent on this project was in researching and learning about
 
 Using the below source code as a template, the CSS was customised and chat capability was added below the game so users are automatically logged in and can communicate as the game progresses. Features were added such as bubble texts, read receipts and a "user is typing" message.  
 
-### ![](https://github.com/tecurtain/WDI_10_homework/blob/master/Thomas/SFP3/tic-tac-toe/app/assets/images/Player1.png?raw=true) Player 1
+### ![](https://github.com/tecurtain/WDI_10_homework/blob/master/Thomas/SFP3/tic-tac-toe/app/assets/images/Player1.png?raw=true)
+### Player 1
 
-### ![](https://github.com/tecurtain/WDI_10_homework/blob/master/Thomas/SFP3/tic-tac-toe/app/assets/images/Player2.png?raw=true) Player 2
+### ![](https://github.com/tecurtain/WDI_10_homework/blob/master/Thomas/SFP3/tic-tac-toe/app/assets/images/Player2.png?raw=true)
+### Player 2
 
 ---
 ## Example Workflow

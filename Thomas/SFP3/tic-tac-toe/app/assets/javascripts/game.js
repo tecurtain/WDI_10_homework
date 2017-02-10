@@ -43,6 +43,14 @@ var Game = function(element, playerType){
       $('#usermsg').val('')
     });
 
+    $('#usermsg').focus(function(e) {
+      App.game.user_typing();
+    });
+
+    $('#usermsg').focusout(function(e) {
+      App.game.user_stopped_typing();
+    });
+
     // bind input actions
     $('#game tr td', this.element).click(function(el, a, b){
       if(self.over) return;
